@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajax Stuff</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="utf-8">
+</head>
+<body>
+
+<!-- Display Search Form -->
+<div class="container search-form">
+    <h2 class="search-title">Search Hubs</h2>
+    <form method="POST" id="hub-search-form">
+        <fieldset class="sp-phrase">
+            <span class="input">
+                <input type="text" class="input-field" id="search-phrase">
+                <label class="input-label" for="search-phrase">
+                    <span class="input-label-content">Search Phrase</span>
+                </label>
+            </span>
+        </fieldset>
+        <fieldset class="sp-stars">
+
+            <label class="search-stars" for="search-stars">Sort Based on Stars</label>
+            <input type="checkbox" id="search-stars" name="search-stars">
+        </fieldset>
+        <fieldset class="sp-language">
+
+        <!-- <label class="select elastic" for="search-language">Language</label> -->
+            <select class="select elastic" name="search-language" id="search-language">
+                <option value="All" disabled selected>Select a Language</option>
+                <option value="Ruby">Ruby</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="PHP">PHP</option>
+                <option value="C#">C#</option>
+
+            </select>
+        </fieldset>
+
+        <fieldset class="sp-submit">
+            <button class="btn btn-submit" type="submit">Submit</button>
+        </fieldset>
+
+    </form>
+</div>
+
+<!-- Display Results -->
+<div class="container result-list">
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

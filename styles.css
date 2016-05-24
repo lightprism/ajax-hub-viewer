@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.result-list {
+    width: 70%;
+    float: right;
+    text-align: center;
+}
+
+.search-form {
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.search-title {
+    font-family: 'Raleway';
+    color: #595f6e;
+}
+
+
+/* Our input field  */
+
+.input {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    max-width: 350px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.input-field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0.8em;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #aaa;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+    -webkit-appearance: none;
+    margin-top: 1em;
+    padding: 1.25em 0.25em;
+    width: 100%;
+    background: transparent;
+    color: #595f6e;
+
+}
+
+.input-field:focus {
+    outline: none;
+}
+
+.input-label {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: #6a7989;
+    font-weight: bold;
+    font-size: 106.25%;
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0.25em;
+    width: 100%;
+    height: calc(100% - 1em);
+    text-align: left;
+    pointer-events: none;
+}
+
+.input-label-content {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+    position: absolute;
+}
+
+.input-label::before,
+.input-label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 10px);
+    border-bottom: 1px solid #b9c1ca;
+}
+.input-label::after {
+    margin-top: 2px;
+    border-bottom: 4px solid hsl(160, 100%, 50%);;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -webkit-transition: transform 0.3s;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.3s;
+}
+
+.input-field:focus + .input-label::after,
+.input-filled .input-label::after {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
+}
+
+.input-field:focus + .input-label .input-label-content,
+.input-filled .input-label-content {
+    -webkit-animation: anim-1 0.3s forwards;
+    animation: anim-1 0.3s forwards;
+}
+
+@keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+    }
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+
+fieldset:last-child {
+    padding: 0;
+}
+
+/* Checkbox */
+
+.sp-stars {
+    padding-bottom: 20px;
+}
+.search-stars {
+    font-family: 'Raleway';
+    color: #6a7989;
+}
+
+/* Select  Language */
+.select {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    background: #fff;
+    z-index: 100;
+    width: 100%;
+    max-width: 500px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.select:focus {
+    outline: none; /* for accessability, add your own style */
+}
+
+.select select {
+    display: none;
+}
+
+.elastic {
+    background: transparent;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #6a7989;
+}
+
+/* Button Submit */
+.btn {
+    border-radius: 4px;
+    background: hsl(160, 100%, 50%);
+    outline: none;
+    border-style: none;
+    padding: 10px 15px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: hsl(160, 100%, 40%);
+}
+
+
+
+/*Result Section(right) Styles*/
+.result {
+    background: #333;
+    padding: 30px 20px;
+    margin: 10px;
+    display: inline-block;
+    color: #fff;
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    /*font-family: 'Raleway', sans-serif;*/
+}
+
+.title {
+    font-size: 1.5em;
+    color: hsl(160, 100%, 50%);
+}
+
+.title a {
+    color: hsl(160, 100%, 50%);
+    text-decoration: none;
+
+}
+
+@media screen and (max-width: 60em) {
+    .search-form,
+    .result-list {
+        width: 100%;
+    }
+}
